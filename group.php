@@ -10,7 +10,7 @@ if ($idg!='none') {
    
     if ($_SERVER["REQUEST_URI"]=="/group.php?idg={$idg}") {
         if($idg!=$group['id'] || $group['zone'] !='group'){
-            $dead_way='';
+           // $dead_way='';
         Table::Dead_Link();
             header( "HTTP/1.1 404 Not Found" );
             header('Location: /404.php');
@@ -19,7 +19,8 @@ if ($idg!='none') {
             header("Location: {$group['ename']}");
         }
     }elseif ($_SERVER["REQUEST_URI"]!="/{$group['ename']}") { 
-        $dead_way='';
+       // $dead_way='';
+    
         Table::Dead_Link();
         header( "HTTP/1.1 404 Not Found" );
         header('Location: /404.php');
@@ -46,7 +47,7 @@ if ($idg!='none') {
             include template('viewall');
         }
 }else{
-    $dead_way='';
+    //$dead_way='';
     Table::Dead_Link();
     header( "HTTP/1.1 404 Not Found" );
     header('Location: /404.php');
