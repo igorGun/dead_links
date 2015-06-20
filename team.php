@@ -11,7 +11,7 @@ if ($_SERVER["SCRIPT_NAME"]=="/team.php" && isset($_GET['id']) && $_GET['id'] !=
 	header("Location: {$team['id']}_{$team['alias']}");
 } elseif (!isset($_GET['id']) || $_GET['id'] == '' || !isset($_GET['alias']) || $_GET['alias'] == '' 
 	|| $_GET['id'] != $team['id'] || $_GET['alias']!="_".$team['alias']) { 
-		$dead_way='';
+		 
        Table::Dead_Link();
 	header( "HTTP/1.1 404 Not Found" );
 	header('Location: /404.php');
