@@ -120,7 +120,7 @@ function current_backend() {
             '/manage/market/index.php' => 'Бизнес',
             '/manage/category/index.php' => 'Категории',
             '/manage/syst/index.php' => 'Система',
-
+            '/manage/errors.php' => 'Битые ссылки',
             );
     $r = $_SERVER['REQUEST_URI'];
     if (preg_match('#/manage/(\w+)/#',$r, $m)) {
