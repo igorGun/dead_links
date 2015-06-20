@@ -220,20 +220,23 @@ class Table
 		return True;
 	}
 	static public function Dead_Link(){
-		 if (isset($_SERVER['HTTP_REFERER'])) {
-                $dead_link = $_SERVER["REQUEST_URI"];
+		$dead_way='';
+		if (isset($_SERVER['HTTP_REFERER'])) {
                 $dead_way = $_SERVER['HTTP_REFERER'];
-                $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way);
-                if(!empty($dead_way)){
-                	$result = DB::Query("SELECT `id`,`dead_link`,`dead_way` FROM `dead_links` WHERE `dead_link` = '$dead_link' AND `dead_way` = '$dead_way'");
-     				$compareLink = mysql_fetch_assoc($result);
-                 	if (empty($compareLink)) {
-                 		$insert = array('dead_link', 'dead_way');
-	                    $table = new Table('dead_links', $arrLink);
-						$table->insert($insert);	
-					}				
-                }
         }
+        $dead_link = $_SERVER["REQUEST_URI"];
+        $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way);
+
+        
+            $result = DB::Query("SELECT `id`,`dead_link`,`dead_way` FROM `dead_links` WHERE `dead_link` = '$dead_link' AND `dead_way` = '$dead_way'");
+     		$compareLink = mysql_fetch_assoc($result);
+            if (empty($compareLink)) {
+             	$insert = array('dead_link', 'dead_way');
+	            $table = new Table('dead_links', $arrLink);
+				$table->insert($insert);	
+			}				
+        
+        
 	}
 }
 ?>
