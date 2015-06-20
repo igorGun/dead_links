@@ -11,20 +11,7 @@ if ($idg!='none') {
     if ($_SERVER["REQUEST_URI"]=="/group.php?idg={$idg}") {
         if($idg!=$group['id'] || $group['zone'] !='group'){
             $dead_way='';
-        if (isset($_SERVER['HTTP_REFERER'])) {
-                $dead_link = $_SERVER["REQUEST_URI"];
-                $dead_way = $_SERVER['HTTP_REFERER'];
-                $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way);
-                if(!empty($dead_way)){
-                    $result = DB::Query("SELECT `id`,`dead_link`,`dead_way` FROM `dead_links` WHERE `dead_link` = '$dead_link' AND `dead_way` = '$dead_way'");
-                    $compareLink = mysql_fetch_assoc($result);
-                    if (empty($compareLink)) {
-                        $insert = array('dead_link', 'dead_way');
-                        $table = new Table('dead_links', $arrLink);
-                        $table->insert($insert);    
-                    }               
-                }
-        }
+        Table::Dead_Link();
             header( "HTTP/1.1 404 Not Found" );
             header('Location: /404.php');
         }else{
@@ -33,20 +20,7 @@ if ($idg!='none') {
         }
     }elseif ($_SERVER["REQUEST_URI"]!="/{$group['ename']}") { 
         $dead_way='';
-        if (isset($_SERVER['HTTP_REFERER'])) {
-                $dead_link = $_SERVER["REQUEST_URI"];
-                $dead_way = $_SERVER['HTTP_REFERER'];
-                $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way);
-                if(!empty($dead_way)){
-                    $result = DB::Query("SELECT `id`,`dead_link`,`dead_way` FROM `dead_links` WHERE `dead_link` = '$dead_link' AND `dead_way` = '$dead_way'");
-                    $compareLink = mysql_fetch_assoc($result);
-                    if (empty($compareLink)) {
-                        $insert = array('dead_link', 'dead_way');
-                        $table = new Table('dead_links', $arrLink);
-                        $table->insert($insert);    
-                    }               
-                }
-        }
+        Table::Dead_Link();
         header( "HTTP/1.1 404 Not Found" );
         header('Location: /404.php');
 
@@ -73,20 +47,7 @@ if ($idg!='none') {
         }
 }else{
     $dead_way='';
-    if (isset($_SERVER['HTTP_REFERER'])) {
-        $dead_link = $_SERVER["REQUEST_URI"];
-        $dead_way = $_SERVER['HTTP_REFERER'];
-        $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way);
-                if(!empty($dead_way)){
-                    $result = DB::Query("SELECT `id`,`dead_link`,`dead_way` FROM `dead_links` WHERE `dead_link` = '$dead_link' AND `dead_way` = '$dead_way'");
-                    $compareLink = mysql_fetch_assoc($result);
-                    if (empty($compareLink)) {
-                        $insert = array('dead_link', 'dead_way');
-                        $table = new Table('dead_links', $arrLink);
-                        $table->insert($insert);    
-                    }               
-                }
-        }
+    Table::Dead_Link();
     header( "HTTP/1.1 404 Not Found" );
     header('Location: /404.php');
 }
