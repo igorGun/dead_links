@@ -1,0 +1,1063 @@
+/********************************************
+   AUTHOR:  			Erwin Aligam 
+   WEBSITE:   			http://www.styleshout.com/
+	TEMPLATE NAME: 	BluePigment
+   TEMPLATE CODE: 	S-0016
+   VERSION:          1.0	
+	DATE:          	July-31-2007
+ *******************************************/ 
+ 
+/********************************************
+   HTML ELEMENTS
+********************************************/ 
+
+/* top elements */
+* { padding: 0; margin: 0; border: 0;margin-top: 0px; }
+
+html{
+	height:100%;
+}
+
+body {
+	font: normal 12px/1.7em  verdana, tahoma, sans-serif;	 
+	text-align: center;
+	background: #1183DA url(/static/theme/green/css/i/headerbg.jpg) repeat-x 0 0;
+	min-height:100%;
+	height:100%;
+	color: #F2F9FF;
+}
+#container{
+	width:1000px;
+	min-width:1000px;
+}
+/* links */
+a {
+	color: #003366;
+	background-color: inherit;
+	text-decoration: none;		
+}
+a:hover {
+	color: #FAA34B; 
+	background-color: inherit;
+	text-decoration: underline;	
+	border: none;
+}
+
+/* headers */
+h1, h2, h3 {
+	font: bold 1em 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+}
+h1 { font-size: 2.5em; } 
+h2 { font-size: 2em; text-transform:uppercase;}
+h3 { font-size: 1.8em; }
+
+p, h1, h2, h3 {
+	margin: 0;
+	padding: 10px 15px;
+}
+
+ul, ol {
+	margin: 10px 30px;
+	padding: 0 15px;
+}
+
+code {
+  margin: .5em 0;
+  display: block;
+  padding: 20px;
+  text-align: left; 
+  overflow: auto;  
+  font: 500 1em/1.5em 'Lucida Console', 'Courier New', monospace ;
+  /* white-space: pre; */
+  background: #1E89DC;
+  border: 1px solid #0065C6;   
+}
+acronym {
+  cursor: help;
+  border-bottom: 1px solid #0065C6;
+}
+blockquote {
+	margin: 10px 15px;
+ 	padding: 10px 0 10px 28px;  
+   border: 1px solid #0065C6;
+	background: #1E89DC; 
+  	font: bold 1.3em/1.5em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+}
+
+/* start - table */
+
+#list table {
+	margin: 10px 15px; 
+	border-collapse: collapse;
+	font: 12px Verdana, Geneva, sans-serif;
+	background: #fff;
+}
+#list th strong {
+	color: #fff;
+}
+#list th {
+	background: #7BBD11;
+	height: 3em;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: #FFF;
+	text-align: left;
+	border-left: 1px solid #B6D59A;
+	border-bottom: solid 2px #8EB200; 
+	border-top: solid 2px #8EB200;
+}
+#list tr {
+	color: #707070;
+	height: 2.5em;	
+}
+#list td {
+	padding-left: 12px;
+	padding-right: 12px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+#list td.first,th.first {
+	border-left: 0px;
+}
+#list tr.row-a {
+	background: #F8F8F8;
+}
+#list tr.row-b {
+	background: #EFEFEF;
+}
+
+#list form {
+	margin: 10px 15px; 
+	padding: 10px;
+	background-color:#F8F8F8;
+	border: 0px;
+}
+
+#list .white {
+	background-color:#EFEFEF;
+	border: 0px;
+	color:#000;
+}
+
+#list .white input.button { 
+	font: bold 1em Arial, Sans-serif; 
+	margin: 0;
+	padding: .25em .3em;
+	color: #555;
+	background: #BFBFBF;
+	border: 2px solid #999;
+}
+
+#list .form-submit input{
+	border: 1px solid #DDD;
+	margin-top:20px;
+	margin-left:20px;
+}
+
+#list .sep{
+	background-color:#7BBD11;
+	height: 2px;
+	margin: 0px 15px 10px 0;
+	clear: both;
+	width: 610px;
+	margin-top:10px;
+	margin-left:-30px;
+}
+/* end - table */
+
+/* form elements */
+form {
+	margin: 10px 15px; 
+	padding: 10px;
+	border: 1px solid #0065C6; 
+	background-color: #ccc; 
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin: .4em 0;	
+}
+input {
+	padding: .3em;
+	border: 1px solid #eee;
+	font: normal 1em Verdana, sans-serif;
+	color:#777;
+}
+textarea {
+	padding: .3em;
+	font: normal 1em/1.5em Verdana, sans-serif;
+	border: 1px solid #eee;
+	height: 10em;
+	display:block;
+}
+input.button { 
+	font: bold 1em Arial, Sans-serif; 
+	margin: 0;
+	padding: .25em .3em;
+	color: #FFF;
+	background: #A2CC00;
+	border: 2px solid #8EB200;
+}
+
+/* search form */
+.searchform {
+	background-color: transparent;
+	border: none;	
+	margin: 0 0 0 10px; padding: 0 0 1.5em 0;	
+	width: 18em;	
+}
+.searchform p { margin: 0; padding: 0; }
+.searchform input.textbox { 
+	width: 11em;
+	color: #777; 
+	padding: .4em; 
+	border: 1px solid #E5E5E5;
+	vertical-align: top;
+}
+.searchform input.button { 
+	width: 60px;
+	vertical-align: top;
+}
+
+/***********************
+	  LAYOUT
+************************/
+
+#header-content, #content, #nav {
+/*
+The width value below sets the total width of the design. It's default value is set to 93%
+which means that it will take up 93% of the browser window's width. You can also set it to a 
+different percentage	value (90%, 85%, etc.). This design is fluid layout by default, but you
+can turn it into a fixed width layout by setting a pixel value to the width (e.g. 900px, 950px).
+*/
+	width: 93%;	
+}
+
+/* box */
+.box {
+	margin: 0;	
+	padding: 10;		
+	border: 5px solid #1F8ADE;
+	-moz-border-radius:50px;
+	background:#fff ;
+    padding-bottom: 30px;
+}
+.splitbox{
+	margin: 0;	
+	padding: 0;		
+	border: 5px solid #1F8ADE;
+	-moz-border-radius:50px;
+	background:#CCC;
+    height:468px;
+    padding-bottom: 30px;
+}
+.boxwhite {
+	margin: 10px 0;	
+	padding: 10px 10px 20px 10px;		
+	border: 5px solid #1F8ADE;
+	background: #fff;	
+	width:650px;
+	color:#000;
+	-moz-border-radius:50px;
+}
+
+.sbox{
+	border: 5px solid #1F8ADE;
+	-moz-border-radius:30px;
+	background:#fff ;
+	color:#000;
+}
+
+/* header */
+#header {
+	height: 147px;
+	text-align: left;	
+}
+#header-content {
+	position: relative;
+	margin: 0 auto; padding: 0;
+}
+#header-content h1#logo-text a {
+	position: absolute;
+	margin: 0; padding: 0;
+	font: bold 58px 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	letter-spacing: -1px;
+	color: #fff;
+	text-decoration: none;
+	
+	/* change the values of top and left to adjust the position of the logo*/
+	top: 30px; left: 10px;	
+}
+#header-content h1#logo-text span {
+	color: #68B5F0;	
+}
+#header-content #slogan {
+	position: absolute;	
+	font: bold 16px 'Trebuchet Ms', Sans-serif;
+	text-transform: none;
+	color: #FFF;	
+	margin: 0; padding: 0;
+	
+	/* change the values of left and top to adjust the position of the slogan */
+	top: 100px; left: 125px;
+}
+
+/* header links */
+#header-content #header-links {
+	position: absolute;
+	top: 25px; 
+	right: 10px;	
+	color: #fff;
+	font: bold 15px "Trebuchet MS", Tahoma, Sans-serif;	
+}
+#header-content #header-links a {	
+	color: #93C9F4;
+	text-decoration: none;	
+}
+#header-content #header-links a:hover {
+	color: #fff;		
+}
+.admin{
+	margin-right:15px;
+	margin-top:40px;
+}
+
+/*cities*/
+#header .guides{
+	position:absolute;
+	left:340px;
+	top:28px;
+	z-index:2;
+}
+#header #invite_friend{
+	position:absolute;
+	left:547px;
+	top:12px;
+	z-index:3;
+}
+
+
+
+#header .city{
+	float:left;
+	width:183px;
+	height:40px;
+	line-height:40px;
+	background:url(i/cityblock.png);
+	backgroung-repeat:repeat-no;
+}
+#header .city h1{
+	text-align:left;
+	padding-left:20px;
+	color:#167bbf;
+	font: bold 16px "Trebuchet MS", Tahoma, Sans-serif;
+}
+#header .change{
+	float:left;
+	width:44px;
+	height:40px;
+	margin-left:-40px;
+	background:url(i/searchcity.png);
+	background-repeat:repeat-no;
+	cursor:pointer;
+}
+#header .city-list{
+	display:none;
+	clear:both;
+	float:left;
+	margin-left:1px;
+	width:160px;
+	margin-top:-1px;
+	padding:10px;
+	padding-bottom:0px;
+	background:#d5edfe;
+	border-top:1px solid #8dbee0;
+	border-right:1px solid #8dbee0;
+	border-left:1px solid #8dbee0;
+	border-bottom:1px solid #8dbee0;
+}
+#header .city-list ul{
+	float:left;
+	padding-bottom:0px;
+    list-style: none;
+}
+#header .city-list li a{
+	color:#167bbf;
+	margin-left:-30px;
+	width:170px;
+	margin-top:-5px;
+	font-weight:bold;
+	text-decoration:none;
+	background:#d5edfe;
+	width:120px;
+	height:25px;
+	display:block;
+	padding:2px 5px;
+	text-align:left;
+	color:#167bbf;
+}
+
+#header .city-list li a:hover{
+	color:#000;
+	font-weight:bold;
+	text-decoration:none;
+	background:#d5edfe;
+	width:120px;
+	height:25px;
+	margin-left:-10px;
+	text-align:left;
+}
+#header .city-list li.current a{
+	background:#eeeeee;
+	color:#167bbf;
+	font-weight:bold;
+	text-decoration:none;
+	background:#d5edfe;
+	width:120px;
+	height:25px;
+	margin-top:-10px;
+	margin-left:-10px;
+	text-align:left;
+}
+#header .city-list li.current a:hover{
+	background:#eeeeee;
+	color:#000;
+	font-weight:bold;
+	text-decoration:none;
+	background:#d5edfe;
+	width:120px;
+	height:25px;
+	margin-top:-10px;
+	margin-left:-10px;
+	text-align:left;
+}
+#header .city-list .other{
+	clear:both;
+	border-top:1px dashed #666;
+	padding-top:5px;
+	font-size:12px;
+	zoom:1;
+}
+#header .city-list .other a{
+	float:right;
+	width:60px;
+	padding:2px 5px;
+	color:#399;
+}
+#header .city-list .other a:hover{
+	background:#666;
+	color:#399;
+	text-decoration:none;
+}
+
+/* Navigation */
+#nav-wrap {
+	float: left;
+	width: 100%;
+	background: url(/static/theme/green/css/i/menubg.jpg) repeat-x left bottom; 
+	clear: both;
+}
+#nav {
+	clear: both;	
+	margin: 0 auto;
+	padding-top: 10px;
+	margin-top:-28px;
+	width:1000px;
+}
+#nav ul {
+	float: left;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;	
+	height: 64px;		
+}
+#nav ul li {
+	float: left;
+	margin: 0; 
+	padding: 0;
+	height: 64px;
+}
+#nav ul li a {
+	display: block;
+	float: left;
+
+	margin: 0;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 15px "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	text-decoration: none;	
+	letter-spacing: 1px;	
+}
+#nav ul li a:hover, 
+#nav ul li a:active {
+	color: #333;	
+}
+
+#nav ul li#current {	
+	background: url(/static/theme/green/css/i/nav-current.jpg) no-repeat center bottom;		
+}
+#nav ul li#current a {
+	color: #333;
+}
+
+#nav1-wrap {
+	float: left;
+	width: 100%;
+	background: url(/static/theme/green/css/i/menubg.jpg) repeat-x left bottom; 
+	clear: both;
+}
+#nav1 {
+	clear: both;	
+	margin: 0 auto;
+	padding-top: 10px;
+	margin-top:-28px;
+	width:1000px;
+}
+#nav1 ul {
+	float: left;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;	
+	height: 64px;		
+}
+#nav1 ul li {
+	float: left;
+	margin: 0; 
+	padding: 0;
+	height: 64px;
+}
+#nav1 ul li a {
+	display: block;
+	float: left;
+
+	margin: 0;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 15px "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	text-decoration: none;	
+	letter-spacing: 1px;	
+}
+#nav1 ul li a:hover, 
+#nav1 ul li a:active {
+	color: #333;	
+}
+
+#nav1 ul li#current {	
+	background: url(/static/theme/green/css/i/nav-current.jpg) no-repeat center bottom;		
+}
+#nav1 ul li#current a {
+	color: #333;
+}
+
+/* content */
+#content-wrap {
+	clear: both;
+	background: #1183DA;		
+	width: 100%;
+}
+#content {
+	text-align: center;
+	padding: 0; 
+	margin: 0 auto;		
+}
+
+/* sidebar */
+#sidebar {
+	width: 950px;
+	margin: 10px 0 10px 0; 
+	padding: 0;
+	text-align:left;
+	margin-left:1px;
+	color: #E8F4FF;
+}
+#sidebar h1 {
+	font: bold 1.75em 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	padding: 0;
+	color: #002368;	
+}
+#sidebar ul.sidemenu {
+	list-style:none;
+	margin: 0;
+	padding: 10px 20px 40px 20px;		
+	font-family: 'Trebuchet MS', Tahoma, Sans-serif;		
+}
+#sidebar ul.sidemenu li {
+	padding: 0; 
+	background: url(/static/theme/green/css/i/sidebullet.gif) no-repeat .3em .5em;
+	float:left;
+}
+
+* html body #sidebar ul.sidemenu li { height: 1%; }
+
+#sidebar ul.sidemenu li a {
+	display: block;
+	font-weight: bold;
+	color: #E8F4FF;	
+	text-decoration: none;
+	padding: 0 0 0 30px;
+	line-height: 1.5em;
+	font-size: 1.35em;
+}
+#sidebar ul.sidemenu li a:hover {
+	background: #0F7ACC url(/static/theme/green/css/i/sidebullet.gif) no-repeat .25em .45em;	
+	color: #FFF;			
+}
+#sidebar ul.sidemenu ul{
+	margin-left: 15px;
+}
+
+#sidebar .sidebox {
+	margin: 5px 15px 5px 0;
+	padding: 0;
+	background: url(/static/theme/green/css/i/sidebarsep.jpg) repeat-x left bottom;
+}
+#sidebar .sep{
+	background: url(/static/theme/green/css/i/sidebarsep.jpg) repeat-x left bottom;
+	height: 2px;
+	margin: 0px 15px 10px 0;
+	clear: both;
+}
+
+/* main */
+#main {
+	margin: 10px 0 10px 0; 
+	padding: 0;		
+	width: 920px;
+	color:#000;
+	text-align:left;
+}
+#main h1 { 
+	font: bold 2.0em 'Trebuchet MS', Arial, Sans-serif;
+	color:#F00;
+	letter-spacing: -2px;		
+	padding-bottom: 0;	
+}
+#main h1 a {
+	color: #F00;
+	text-decoration: none;
+}
+#main .text{
+	width:160px;
+	float:right;
+	/*margin-top:-280px;*/
+	margin-right:5px;
+	text-align:justify;
+}
+
+#teamindex{
+	border: 1px solid #999;
+	font:12px Verdana, Geneva, sans-serif;
+	color:#000;
+	width:600px;
+	margin-left:50px;
+	padding:0;
+}
+
+#teamindex .ins{
+	font: 12px Verdana, Geneva, sans-serif;
+	color: #000;
+}
+
+#no ul{
+	height:12px;
+}
+#no ul li{
+	float:left;
+	padding:0 15px;
+	display:block;
+}
+.about{
+	text-align:right;
+	margin-right:20px;
+	margin-top:19px;
+	font: bold 14px Verdana, Geneva, sans-serif;
+}
+.time{
+	margin-top:-38px;
+	margin-left:70px;
+	font: bold 14px Verdana, Geneva, sans-serif;
+	color:#000;
+}
+
+.discuss{
+	margin-top:-37px;
+	margin-left:340px;
+	font: bold 14px Verdana, Geneva, sans-serif;
+	color:#000;
+}
+
+.price{
+	border:0;
+	padding:0;
+	margin:0;
+	font: bold 14px "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	font-style:#fff;
+}
+#win, #win2, #win3, #win4{
+	background: #1E89DC; 
+  	font: bold 1.3em/1.5em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	width:300px;
+	margin-left:615px;
+	-moz-border-radius:25px;
+	margin-top:15px;
+	border:1px solid #0065C6;
+	color: #F2F9FF;
+}
+#win {
+	margin-top:-220px;
+	height:65px;
+}
+
+#win2 {
+	text-align:right;
+	min-height:88px;
+}
+
+#deal-buy{
+	position:absolute;
+	margin-top:-255px;
+	font:bold 2.0em Verdana, Geneva, sans-serif;
+	margin-left:590px;
+	color: #F2F9FF;
+}
+.button{
+	position:absolute;
+	margin-top:-65px;
+	margin-left:140px;
+}
+
+.clock{
+	margin-top:-17px; 
+	margin-left:1px; 
+	position:absolute;
+}
+
+.expire{
+	margin-left:630px;
+	margin-top:5px;
+	font: bold 14px "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	color: #000;
+}
+
+.pics{
+	width: 700px;
+}
+
+.pics img{
+	border: 5px solid #1F8ADE;
+}
+
+.pics ul{
+	list-style:none;
+	margin-left: 20px;
+	position:absolute;
+}
+
+.pics li{
+	float:left;
+	padding-right:15px;
+}
+
+#mainbox {
+	padding: 0;	
+	margin:0;
+	width: 963px;
+}
+#mainbox h1 { 
+	font: bold 2.0em Verdana, Arial, Sans-serif;
+	color: #000;
+	letter-spacing: -2px;		
+	padding-bottom: 0;	
+}
+#mainbox h1 a {
+	color: #000;
+	text-decoration: none;
+}
+#mainbox .subbox{
+	height:333px;
+	background: url(/static/theme/green/css/i/boxbg.jpg);
+	width:100%;
+	border-bottom:1px solid #0065C6;
+	border-top:1px solid #0065C6;
+}
+#mainbox .title{
+	height:80px;
+}
+#side{
+	width: 630px;
+	padding: 10px;
+	height: 100%;
+	color:#000;
+}
+#side table{
+	font:12 px Verdana, Geneva, sans-serif;
+	line-height:1.6;
+	color:#000;
+}
+#side ul li{
+	list-style:circle;
+}
+
+#side .left{
+
+	width:320px;
+	height:100%;
+	background-color:#0F3;
+}
+
+#side .right{
+	height:100%;
+	background-color:#966;
+}
+
+#side-business{
+	text-align:justify;
+	padding:10px;
+}
+
+/* footer */
+#footer-wrap {
+	background-color:#001342;
+	clear: both;
+	border-top: 5px solid #86CC15;
+	text-align: left;
+	padding: 1.6em 0;
+}
+#footer-wrap a {
+	text-decoration: none;
+	color: #5B9CFF;
+	font-weight: bold;
+}
+#footer-wrap a:hover {
+	color: #E8F4FF;	
+}
+#footer-wrap p {
+	padding: 10px 0;
+}
+#footer-wrap h2 {
+	color: #E8F4FF;
+	margin: 0;
+	padding: 0 10px; 
+	text-transform: none;
+}
+
+
+/* footer columns */
+#footer-columns {
+	color: #5B9CFF;
+	margin: 0 auto; 
+	padding: 0;	
+	width: 1000px;
+}
+#footer-columns ul {
+	list-style: none;
+	margin: 10px 0 0 0; 
+	padding: 0;	
+	background: url(/static/theme/green/css/i/footer-dots.jpg) repeat-x left top;	
+}
+#footer-columns li {
+	background: url(/static/theme/green/css/i/footer-dots.jpg) repeat-x left bottom;		
+}
+#footer-columns li a {
+	display: block;
+	font-weight: normal;
+	padding: .5em 0 .5em 1em;
+	width: 96%;
+}
+#footer-columns .col3, .col3-center {
+	float: left;
+	width: 32%;
+}
+#footer-columns .col3-center { 
+	margin: 0 15px; 
+}
+
+/* bottom */
+#footer-bottom {
+	clear: both;
+	color: #E8F4FF;	
+	margin: 0 auto; 
+	padding: 1em 0;
+	text-align: center;
+}
+
+#count{
+	margin-left: 900px;
+	margin-top: -40px;
+}
+
+/* alignment classes */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  {	text-align: left; }
+.align-right {	text-align: right; }
+
+/* additional classes */
+.clear { clear: both; }
+.white {	color: #E8F4FF; }
+
+img.rssfeed {
+	border: none; 
+	padding: 0 0 5px 0;
+	background: transparent;
+}
+
+.post-by {
+	font-size: .95em;	
+	padding-top: 0;
+}
+.post-footer { 
+	text-align: right; 
+	background: #1E89DC;
+	border: 1px solid #0065C6; 
+	padding: 8px 10px;
+	margin: 20px 15px 10px 15px;
+}
+.post-footer .date {
+	background: url(/static/theme/green/css/i/clock.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 3px 0 3px;
+}
+.post-footer .comments {
+	background: url(/static/theme/green/css/i/comment.gif) no-repeat left center;
+	padding-left: 	20px; margin: 0 3px 0 3px;
+}
+.post-footer .readmore {
+	background: url(/static/theme/green/css/i/page.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 3px 0 3px;
+}
+
+table.coupons-table
+{
+    padding: 0px 10px;
+}
+table.coupons-table td
+{
+    padding: 0px 5px;
+}
+#doc
+{
+    margin-top: -10px;
+}
+
+/* sysmsg */
+.sysmsgw{
+	clear:both;
+	padding:8px 0 10px 37px;
+	color:#000;
+	font-size:14px;
+}
+.sysmsg{
+	position:relative;
+	width:930px;
+	margin:auto;
+	padding-left:30px;
+}
+.sysmsg .close{
+	position:absolute;
+	right:20px;
+	margin-top:-30px;
+	padding-right:16px;
+	background:url(i/bg-sysmsg-close.gif) 100% 50% no-repeat;
+	font-size:12px;
+	cursor:pointer;
+}
+#sysmsg-error{
+	border:1px solid #d01e5e;
+	background:#ffdcd7;
+	color:#d01e5e;
+}
+#sysmsg-success{
+	border-top:2px solid #0065C6;
+	border-bottom:2px solid #0065C6;
+	background:#CCC;
+	color:#0065C6;
+}
+#sysmsg-error .sysmsg{
+	background:url(i/bg-sysmsg-error.gif) no-repeat 0 0;
+}
+#sysmsg-success .sysmsg{
+	background:url(i/bg-sysmsg-success.gif) no-repeat 0 0;
+}
+
+
+
+
+#order-pay-dialog{ color:#000;}
+#dialog .coupons-table td, #dialog .coupons-table th{padding:2px;}
+#order-pay-dialog .bd{padding:1px;background:#fff;}
+#order-pay-dialog h3{height:40px;line-height:40px;padding:0 10px;background:#CCC;text-align:left;}
+#order-pay-dialog h3 span{float:right;}
+#order-pay-dialog .close{
+	float:right;
+	width:35px;
+	padding-right:20px;
+	background:url(i/bg-newbie-close.gif) no-repeat 100% 50%;
+	*background-position:100% 45%;
+	color:#2f2f2f;
+	cursor:pointer;
+	font: bold 12px Verdana, Geneva, sans-serif; 
+	margin-top:10px;
+	margin-right:10px;
+}
+#order-pay-dialog .info{margin:20px 15px 20px;min-height:56px;padding-left:70px;background:url(i/bg-sys-icon-info.gif) no-repeat 0 0;font-size:16px;font-family: Verdana, Geneva, sans-serif;display:block;}
+#order-pay-dialog .notice{padding-left:35px; margin:5px 0;}
+#order-pay-dialog .notice input{width:180px;}
+#order-pay-dialog .act{margin:15px 35px 20px;}
+#order-pay-dialog .retry{margin:10px 35px 20px;}
+
+
+
+/*dialog*/
+#dialog {
+	position:absolute;
+	z-index:9999;
+	border:4px solid #0065C6;
+	display:none;
+	text-align:left;
+	color: #000;
+}
+#pagemarker {
+	position:absolute;
+	left:0; 
+	top:0; 
+	background-color:#FFF; 
+	opacity:;
+	filter:alpha(opacity=0); 
+	opacity:0; 
+	z-index:1; 
+}
+/*end*/
+
+/*validator*/
+span.errorTip{ margin-left:4px; font-size:12px; color:#C00;}
+div.errorTip { font-size:12px; color:#C00; }
+div.validTip, span.validTip{ font-size:12px; display:none; } 
+span.require { color:#C00; font-weight:bold; }
+.noerror .errorTip, .noerror .validTip { display: none; } 
+.errorInput{ border: 1px solid; border-color:#d01e5e; background-color:#fef2f2; }
+
+/*.end_content {
+    position: relative;
+	clear:both;
+    height:10px;
+}
+
+div.page{
+  position: relative;
+  margin: auto;
+  height: auto !important;
+  min-height: 100%;
+  height: 100%;
+}*/
+
+.filter {list-style:none; padding:0; margin:0}
+div.field.web>div{
+	display: inline-block;
+}
