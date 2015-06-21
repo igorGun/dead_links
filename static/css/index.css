@@ -467,7 +467,7 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	margin: 0 auto;
 	padding-top: 10px;
 	margin-top:-28px;
-	width:1000px;
+	width:1125px;
 }
 #nav ul {
 	float: left;
