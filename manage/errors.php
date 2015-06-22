@@ -23,8 +23,7 @@ $arrLinks = DB::LimitQuery('dead_links', array(
     	foreach ($_GET["check"] as $id => $val) {
     		DB::Query("UPDATE `dead_links` SET `check`='".intval($val)."' WHERE `id`='".$id."'");
     	}
+    	Utility::Redirect( WEB_ROOT . '/manage/errors.php');
     }
     
 include template('manage_dead_links');
-echo "<pre>";
-var_dump($_GET["check"]);
