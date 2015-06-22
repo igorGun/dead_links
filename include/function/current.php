@@ -120,7 +120,6 @@ function current_backend() {
             '/manage/market/index.php' => 'Бизнес',
             '/manage/category/index.php' => 'Категории',
             '/manage/syst/index.php' => 'Система',
-            '/manage/errors.php' => 'Битые ссылки',
             );
     $r = $_SERVER['REQUEST_URI'];
     if (preg_match('#/manage/(\w+)/#',$r, $m)) {
@@ -310,6 +309,7 @@ function mcurrent_misc($selector=null) {
 		'/manage/misc/feedback.php' => 'Обратная связь',
 		'/manage/misc/subscribe.php' => 'Подпишитесь',
 		'/manage/misc/invite.php' => 'Пригласи друга',
+		'/manage/errors.php' => 'Битые ссылки',
 	);
 	$l = "/manage/misc/{$selector}.php";
 	return current_link($l,$a,true);
