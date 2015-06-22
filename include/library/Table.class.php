@@ -225,13 +225,12 @@ class Table
                 $dead_way = $_SERVER['HTTP_REFERER'];
         }
         $dead_link = $_SERVER["REQUEST_URI"];
-        $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way);
-
-        
+        $date=date('Y-m-d');
+        $arrLink = array('dead_link'=>$dead_link,'dead_way'=>$dead_way,'date'=>$date);
             $result = DB::Query("SELECT `id`,`dead_link`,`dead_way` FROM `dead_links` WHERE `dead_link` = '$dead_link' AND `dead_way` = '$dead_way'");
      		$compareLink = mysql_fetch_assoc($result);
             if (empty($compareLink)) {
-             	$insert = array('dead_link', 'dead_way');
+             	$insert = array('dead_link', 'dead_way','date');
 	            $table = new Table('dead_links', $arrLink);
 				$table->insert($insert);	
 			}				
