@@ -1,7 +1,10 @@
 <?php
 require_once(dirname(dirname(__FILE__)) . '/app.php');
 need_manager();
-$condition = array();
+$condition = array(
+	'check'=>'0');
+
+
 $count = Table::Count('dead_links', $condition);
 list($pagesize, $offset, $pagestring) = pagestring($count, 20);
 $arrLinks = DB::LimitQuery('dead_links', array(
@@ -16,4 +19,12 @@ $arrLinks = DB::LimitQuery('dead_links', array(
         $arrLinks[]=$row;
     }*/
 //print_r($arrLinks);
+    if (isset($_GET["check"])) {
+    	foreach ($_GET["check"] as $id => $val) {
+    		DB::Query("UPDATE `dead_links` SET `check`='".intval($val)."' WHERE `id`='".$id."'");
+    	}
+    }
+    
 include template('manage_dead_links');
+echo "<pre>";
+var_dump($_GET["check"]);
