@@ -6,6 +6,7 @@ $condition = array(
 
 
 $count = Table::Count('dead_links', $condition);
+
 list($pagesize, $offset, $pagestring) = pagestring($count, 20);
 $arrLinks = DB::LimitQuery('dead_links', array(
 	'condition' => $condition,
@@ -23,7 +24,12 @@ $arrLinks = DB::LimitQuery('dead_links', array(
     	foreach ($_GET["check"] as $id => $val) {
     		DB::Query("UPDATE `dead_links` SET `check`='".intval($val)."' WHERE `id`='".$id."'");
     	}
-    	Utility::Redirect( WEB_ROOT . '/manage/errors.php');
+    	$count = Table::Count('dead_links', $condition);
+    	if ($count > 0){
+    		Utility::Redirect( WEB_ROOT . '/manage/errors.php');
+    	}elseif($count == 0){
+    		Utility::Redirect( WEB_ROOT . '/manage/misc/index.php');
+    	}
     }
     
 include template('manage_dead_links');
