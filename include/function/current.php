@@ -1,4 +1,5 @@
 <?php
+require_once(dirname(dirname(dirname(__FILE__))) . '/app.php');
 function current_frontend() {          
 	global $INI;
 	$a = array(
@@ -303,13 +304,22 @@ function current_link1($link, $links, $span=false) {
 
 /* manage current */
 function mcurrent_misc($selector=null) {
+	$condition = array(
+	'check'=>'0');
+	$count = Table::Count('dead_links', $condition);
+	if ($count == 0) {
+		$pageLinks = null;
+	}else{
+		$pageLinks ='Битые ссылки';
+	}
 	$a = array(
 		'/manage/misc/index.php' => 'Главная',
 		//'/manage/misc/ask.php' => 'Вопросы',
 		'/manage/misc/feedback.php' => 'Обратная связь',
 		'/manage/misc/subscribe.php' => 'Подпишитесь',
 		'/manage/misc/invite.php' => 'Пригласи друга',
-		'/manage/errors.php' => 'Битые ссылки',
+		'/manage/errors.php' => $pageLinks
+	
 	);
 	$l = "/manage/misc/{$selector}.php";
 	return current_link($l,$a,true);
